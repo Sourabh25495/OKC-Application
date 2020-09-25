@@ -32,7 +32,7 @@ export const EditPage = ({ setShowEditPage }) => {
           rows={4}
           variant="outlined"
           fullWidth
-          value={editFieldValue}
+          defaultValue={editFieldValue}
         />
       </div>
       <div className="button">
