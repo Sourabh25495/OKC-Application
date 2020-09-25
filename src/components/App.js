@@ -2,9 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 import { increment, submitField } from "../madlibs";
 
+import Button from "@material-ui/core/Button";
+
+import { InputComponent } from "./InputComponent";
+
 require("./App.scss");
 
 const App = ({ counter, increment, submitField }) => {
+  //Temp code to update redux
   const params = { id: "hometown", answer: "test" };
   const params2 = { id: "favoriteFood", answer: "test1" };
 
@@ -13,8 +18,21 @@ const App = ({ counter, increment, submitField }) => {
       Counter (to make sure redux works): {counter}
       <br />
       <br />
-      <button onClick={() => submitField(params)}>Increment</button>
-      <button onClick={() => submitField(params2)}>Increment</button>
+      <InputComponent />
+      {/* <Button
+        variant="contained"
+        color="primary"
+        onClick={() => submitField(params)}
+      >
+        Primary
+      </Button> */}
+      {/* <Button
+        variant="contained"
+        color="primary"
+        onClick={() => submitField(params2)}
+      >
+        Primary
+      </Button> */}
     </div>
   );
 };
