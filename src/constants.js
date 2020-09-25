@@ -2,8 +2,8 @@ export const FIELD_NAMES = {
   hometown: "hometown",
   favoriteFood: "favoriteFood",
   loveToDo: "loveToDo",
-  music: "music",
   messageIf: "messageIf",
+  music: "music",
   bar: "bar",
 };
 
@@ -26,10 +26,10 @@ export const FIELDS = {
 };
 
 export const STATIC_ESSAY_LINES = {
-  [FIELD_NAMES.hometown]: 'Originally from ',
-  [FIELD_NAMES.favoriteFood]: 'Cant get enough ',
-  [FIELD_NAMES.loveToDo]: 'I ',
-  [FIELD_NAMES.messageIf]: 'I love listening to ',
-  [FIELD_NAMES.music]: 'Send Me a message if you ',
-  [FIELD_NAMES.bar]: 'My favourite watering hole is ',
+  [FIELD_NAMES.hometown]: "Originally from ",
+  [FIELD_NAMES.favoriteFood]: "Cant get enough ",
+  [FIELD_NAMES.loveToDo]: "I ",
+  [FIELD_NAMES.messageIf]: "Send Me a message if you ",
+  [FIELD_NAMES.music]: "I love listening to ",
+  [FIELD_NAMES.bar]: "My favourite watering hole is ",
 };

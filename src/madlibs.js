@@ -17,8 +17,8 @@ export const INITIAL_STATE = {
     FIELD_NAMES.hometown,
     FIELD_NAMES.favoriteFood,
     FIELD_NAMES.loveToDo,
-    FIELD_NAMES.music,
     FIELD_NAMES.messageIf,
+    FIELD_NAMES.music,
     FIELD_NAMES.bar,
   ],
 
@@ -35,15 +35,13 @@ export function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case SUBMIT_FIELD: {
       const { fieldName, answer, staticStatement } = action.payload;
-      
+
       return {
         ...state,
         fieldAnswers: { ...state.fieldAnswers, [fieldName]: answer },
-        essayText: { ...state.essayText, [staticStatement]: answer}
-        
+        essayText: { ...state.essayText, [staticStatement]: answer },
       };
     }
-
 
     case INCREMENT_COUNTER: {
       return {
@@ -68,7 +66,6 @@ export function reducer(state = INITIAL_STATE, action) {
 export function submitField({ id, answer, statement }) {
   return { type: SUBMIT_FIELD, payload: { fieldName: id, answer, statement } };
 }
-
 
 export function increment() {
   return { type: INCREMENT_COUNTER };

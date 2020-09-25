@@ -25,6 +25,7 @@ export const ComposeEssay = ({ setShowEditPage }) => {
     staticStatement
   );
   const answers = useSelector((state) => state.fieldAnswers);
+  console.log("Answers", answers)
   const classes = useStyles();
 
   const mapAnswers = () => {

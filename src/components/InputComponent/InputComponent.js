@@ -12,7 +12,7 @@ export const InputComponent = ({ label, id, staticText }) => {
       <div className="field-label">
         <label>{label}</label>
       </div>
-      <>
+      <div style={{paddingLeft: '15px', width: '95%', paddingRight: '15px'}}>
         <TextField
           variant="outlined"
           className={classes.textField}
@@ -27,8 +27,9 @@ export const InputComponent = ({ label, id, staticText }) => {
               },
             })
           }
+          fullWidth
         />
-      </>
+      </div>
     </div>
   );
 };
