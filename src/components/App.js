@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 
-import ComposeEssay from "./ComposeEssay";
-import EditPage from "./EditPage";
+import { ComposeEssay } from "./ComposeEssay";
+import {EditPage} from "./EditPage";
 
 require("./App.scss");
 

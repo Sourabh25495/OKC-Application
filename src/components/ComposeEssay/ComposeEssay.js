@@ -1,9 +1,9 @@
 import React from "react";
-import { InputComponent } from "./InputComponent";
-import { FIELD_NAMES, COPY, STATIC_ESSAY_LINES } from "../constants";
+import { InputComponent } from "../InputComponent";
+import { FIELD_NAMES, COPY, STATIC_ESSAY_LINES } from "../../constants";
 import { Button } from "@material-ui/core";
-import { useStyles } from "./styles";
-import { processInputFieldParams } from "./utils";
+import { useStyles } from "../styles";
+import { processInputFieldParams } from "../utils";
 import { useSelector } from "react-redux";
 
 const answerConfigs = {
@@ -15,7 +15,7 @@ const answerConfigs = {
   bar: "My favourite watering hole is ",
 };
 
-const ComposeEssay = ({ setShowEditPage }) => {
+export const ComposeEssay = ({ setShowEditPage }) => {
   const fieldLabels = Object.values(COPY);
   const fieldNames = Object.values(FIELD_NAMES);
   const staticStatement = Object.values(STATIC_ESSAY_LINES);
@@ -96,4 +96,3 @@ const ComposeEssay = ({ setShowEditPage }) => {
   );
 };
 
-export default ComposeEssay;
