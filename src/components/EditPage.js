@@ -29,7 +29,7 @@ export const EditPage = ({ setShowEditPage }) => {
         <TextField
           id="edit-my-essay"
           multiline
-          rows={4}
+          rows={8}
           variant="outlined"
           fullWidth
           defaultValue={editFieldValue}
