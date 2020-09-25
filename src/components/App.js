@@ -4,7 +4,8 @@ import { increment, submitField } from "../madlibs";
 
 import Button from "@material-ui/core/Button";
 
-import { InputComponent } from "./InputComponent";
+
+import SelfSpace from "./SelfSpace";
 
 require("./App.scss");
 
@@ -15,10 +16,8 @@ const App = ({ counter, increment, submitField }) => {
 
   return (
     <div className="match-area">
-      Counter (to make sure redux works): {counter}
-      <br />
-      <br />
-      <InputComponent />
+      
+      <SelfSpace />
       {/* <Button
         variant="contained"
         color="primary"

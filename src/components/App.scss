@@ -1,4 +1,21 @@
 .match-area {
   padding: 20px;
   display: block;
+  color: green($color: #000000)
+}
+
+.essay-page-container{
+  display: inline;
+}
+
+.form-container {
+  display: inline-block; 
+  width: 45%; 
+  padding: 5px;
+
+}
+
+.essay-container {
+  display: inline-block; 
+  width: 45%
 }
