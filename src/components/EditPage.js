@@ -36,9 +36,10 @@ export const EditPage = ({ setShowEditPage }) => {
         />
       </div>
       <div className="button">
+        
         <Button
           variant="contained"
-          className={classes.edit}
+          className={classes.muiButton}
           onClick={handleShowEditPage}
         >
           Start Over

@@ -14,7 +14,9 @@ const App = () => {
       {showEditPage === "essay" && (
         <ComposeEssay setShowEditPage={setShowEditPage} />
       )}
-      {showEditPage === "editPage" && <EditPage setShowEditPage={setShowEditPage}/>}
+      {showEditPage === "editPage" && (
+        <EditPage setShowEditPage={setShowEditPage} />
+      )}
     </div>
   );
 };

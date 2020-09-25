@@ -28,18 +28,15 @@ const SelfSpace = ({ setShowEditPage }) => {
         {answers && answers.favoriteFood
           ? `Cant get enough ${answers.favoriteFood} `
           : ""}
-        {answers && answers.loveToDo ? `I ${answers.loveToDo}. ` : ""}
+        {answers && answers.loveToDo ? `I ${answers.loveToDo} ` : ""}
         {answers && answers.music
-          ? `I love listening to ${answers.music}. `
-          : ""}
-        {answers && answers.music
-          ? `I love listening to ${answers.music}. `
+          ? `I love listening to ${answers.music} `
           : ""}
         {answers && answers.messageIf
-          ? `Send Me a message if you  ${answers.messageIf}. `
+          ? `Send Me a message if you  ${answers.messageIf} `
           : ""}
         {answers && answers.bar
-          ? `My favourite watering hole is ${answers.messageIf}. `
+          ? `My favourite watering hole is ${answers.messageIf} `
           : ""}
       </p>
     );
@@ -76,14 +73,16 @@ const SelfSpace = ({ setShowEditPage }) => {
           <Essay />
         </div>
         <div className="button">
-          <Button
-            variant="contained"
-            className={classes.edit}
-            disabled={answers ? Object.keys(answers).length === 0 : false}
-            onClick={handleShowEditPage}
-          >
-            Edit
-          </Button>
+          {answers && Object.keys(answers).length === 6 && (
+            <Button
+              variant="contained"
+              className={classes.muiButton}
+              // disabled={answers ? Object.keys(answers).length === 0 : false}
+              onClick={handleShowEditPage}
+            >
+              Edit
+            </Button>
+          )}
         </div>
       </div>
     </div>
