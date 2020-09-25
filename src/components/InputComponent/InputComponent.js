@@ -15,7 +15,7 @@ export const InputComponent = ({ label, id }) => {
       <>
         <TextField
           variant="outlined"
-          onChange={(e) =>
+          onBlur={(e) =>
             dispatch({
               type: SUBMIT_FIELD,
               payload: { fieldName: id, answer: e.target.value },
