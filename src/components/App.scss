@@ -13,6 +13,11 @@
   display: inline;
 }
 
+.input-component {
+  display: grid;
+  padding-top: 30px;
+}
+
 .form-container {
   display: inline-block;
   width: 50%;
@@ -56,6 +61,7 @@
 
 .essay-text-display {
   padding-left: 20px;
+  padding-bottom: 20px;
   font-family: arial;
   font-size: 18px;
 }
