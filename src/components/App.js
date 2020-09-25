@@ -2,8 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { increment, submitField } from "../madlibs";
 
-import Button from "@material-ui/core/Button";
-
 
 import SelfSpace from "./SelfSpace";
 
