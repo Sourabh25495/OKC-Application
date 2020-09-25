@@ -1,11 +1,9 @@
 import React from "react";
 import { TextField } from "@material-ui/core";
-import { connect } from "react-redux";
-import { submitField } from "../../madlibs";
 import { useDispatch } from "react-redux";
 import { SUBMIT_FIELD } from "../../madlibs";
 
-export const InputComponent = ({ label, id }) => {
+export const InputComponent = ({ label, id, staticText }) => {
   const dispatch = useDispatch();
   return (
     <div style={{ display: "grid", paddingTop: "30px" }}>
@@ -15,11 +13,12 @@ export const InputComponent = ({ label, id }) => {
       <>
         <TextField
           variant="outlined"
-          onBlur={(e) =>
-            dispatch({
-              type: SUBMIT_FIELD,
-              payload: { fieldName: id, answer: e.target.value },
-            })
+          onBlur={
+            ((e) =>
+              dispatch({
+                type: SUBMIT_FIELD,
+                payload: { fieldName: id, answer: e.target.value, staticStatement: staticText},
+              }))
           }
         />
       </>

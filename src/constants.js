@@ -24,3 +24,12 @@ export const FIELDS = {
   [FIELD_NAMES.music]: COPY[FIELD_NAMES.music],
   [FIELD_NAMES.bar]: COPY[FIELD_NAMES.bar],
 };
+
+export const STATIC_ESSAY_LINES = {
+  [FIELD_NAMES.hometown]: 'Originally from ',
+  [FIELD_NAMES.favoriteFood]: 'Cant get enough ',
+  [FIELD_NAMES.loveToDo]: 'I ',
+  [FIELD_NAMES.messageIf]: 'I love listening to ',
+  [FIELD_NAMES.music]: 'Send Me a message if you ',
+  [FIELD_NAMES.bar]: 'My favourite watering hole is ',
+};

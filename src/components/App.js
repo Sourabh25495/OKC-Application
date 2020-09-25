@@ -1,46 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
-import { increment, submitField } from "../madlibs";
 
-
-import SelfSpace from "./SelfSpace";
+import ComposeEssay from "./ComposeEssay";
 
 require("./App.scss");
 
-const App = ({ counter, increment, submitField }) => {
-  //Temp code to update redux
-  const params = { id: "hometown", answer: "test" };
-  const params2 = { id: "favoriteFood", answer: "test1" };
-
+const App = () => {
   return (
     <div className="match-area">
-      
-      <SelfSpace />
-      {/* <Button
-        variant="contained"
-        color="primary"
-        onClick={() => submitField(params)}
-      >
-        Primary
-      </Button> */}
-      {/* <Button
-        variant="contained"
-        color="primary"
-        onClick={() => submitField(params2)}
-      >
-        Primary
-      </Button> */}
+      <ComposeEssay />
     </div>
   );
 };
 
-function mapStateToProps(state) {
-  return state;
-}
-
-const mapDispatchToProps = {
-  increment,
-  submitField,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, null)(App);

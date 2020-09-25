@@ -4,6 +4,8 @@ import { FIELD_NAMES } from "./constants";
 // ----------------------------------------------------------------------------
 
 export const SUBMIT_FIELD = "MADLIBS.SUBMIT_FIELD";
+
+export const UPDATE_ESSAY = "MADLIBS.UPDATE_ESSAY";
 export const INCREMENT_COUNTER = "MADLIBS.INCREMENT_COUNTER";
 
 // Initial state
@@ -20,7 +22,7 @@ export const INITIAL_STATE = {
   ],
 
   fieldAnswers: {},
-  essayText: "",
+  essayText: {},
 
   counter: 1,
 };
@@ -29,13 +31,18 @@ export const INITIAL_STATE = {
 // ----------------------------------------------------------------------------
 
 export function reducer(state = INITIAL_STATE, action) {
-  console.log("Test123", action.payload)
   switch (action.type) {
     case SUBMIT_FIELD: {
-      console.log("In here")
-      const {fieldName, answer}  = action.payload
-      return { ...state, fieldAnswers: {...state.fieldAnswers, [fieldName] : answer} };
+      const { fieldName, answer, staticStatement } = action.payload;
+      
+      return {
+        ...state,
+        fieldAnswers: { ...state.fieldAnswers, [fieldName]: answer },
+        essayText: { ...state.essayText, [staticStatement]: answer}
+        
+      };
     }
+
 
     case INCREMENT_COUNTER: {
       return {
@@ -52,9 +59,10 @@ export function reducer(state = INITIAL_STATE, action) {
 // Action creators
 // ----------------------------------------------------------------------------
 
-export function submitField({ id, answer }) {
-  return { type: SUBMIT_FIELD, payload: { fieldName: id, answer } };
+export function submitField({ id, answer, statement }) {
+  return { type: SUBMIT_FIELD, payload: { fieldName: id, answer, statement } };
 }
+
 
 export function increment() {
   return { type: INCREMENT_COUNTER };

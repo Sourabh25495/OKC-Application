@@ -4,7 +4,7 @@
   color: green($color: #000000);
   border-style: solid;
   border-width: 60px;
-  border-color: #3D59AB;
+  border-color: #3d59ab;
   height: 90vh;
 }
 
@@ -34,12 +34,18 @@
   font-size: 28px;
   font-family: Arial;
 }
-.field-label{
+.field-label {
   padding: 15px;
   font-size: 22px;
   font-family: Arial;
 }
 
-.edit-button{
+.edit-button {
   padding-left: 20px;
+}
+
+.essay-text-display {
+  padding-left: 20px;
+  font-family: arial;
+  font-size: 18px;
 }
