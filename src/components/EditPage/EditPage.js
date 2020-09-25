@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import TextField from "@material-ui/core/TextField";
-import { Button } from "@material-ui/core";
+import { Button, TextField } from "@material-ui/core";
 import { useStyles } from "../styles";
 import { useDispatch } from "react-redux";
 import { processObjectToPopulateText } from "../utils";
@@ -36,7 +35,6 @@ export const EditPage = ({ setShowEditPage }) => {
         />
       </div>
       <div className="button">
-        
         <Button
           variant="contained"
           className={classes.muiButton}
