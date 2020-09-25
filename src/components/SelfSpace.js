@@ -1,11 +1,14 @@
 import React from "react";
 import { InputComponent } from "./InputComponent";
-import { COPY } from "../constants";
+import { FIELD_NAMES, COPY } from "../constants";
 import { Button } from "@material-ui/core";
 import { useStyles } from "./styles";
+import { processInputFieldParams } from "./utils";
 
 const SelfSpace = () => {
   const fieldLabels = Object.values(COPY);
+  const fieldNames = Object.values(FIELD_NAMES);
+  const inputFieldParams = processInputFieldParams(fieldLabels, fieldNames);
   const classes = useStyles();
   return (
     <div className="essay-page-container">
@@ -14,10 +17,13 @@ const SelfSpace = () => {
           <b>About Me</b>
         </div>
         <div>
-          {Array.isArray(fieldLabels) &&
-            fieldLabels.map((currentLabel) => (
-              <div key={currentLabel}>
-                <InputComponent label={currentLabel} />
+          {Array.isArray(inputFieldParams) &&
+            inputFieldParams.map((currentLabel) => (
+              <div key={currentLabel.label}>
+                <InputComponent
+                  label={currentLabel.label}
+                  id={currentLabel.fieldType}
+                />
               </div>
             ))}
         </div>
@@ -36,14 +42,13 @@ const SelfSpace = () => {
             textmy textmy textmy textmy textmy textmy textmy textmy textmy
             textmy textmy textmy textmy textmy textmy textmy textmy textmy
             textmy textmy textmy textmy textmy textmy textmy textmy textmy
-            textmy text
-            my textmy textmy textmy textmy textmy textmy textmy textmy textmy
+            textmy text my textmy textmy textmy textmy textmy textmy textmy
             textmy textmy textmy textmy textmy textmy textmy textmy textmy
             textmy textmy textmy textmy textmy textmy textmy textmy textmy
             textmy textmy textmy textmy textmy textmy textmy textmy textmy
             textmy textmy textmy textmy textmy textmy textmy textmy textmy
             textmy textmy textmy textmy textmy textmy textmy textmy textmy
-            textmy text
+            textmy textmy textmy text
           </p>
         </div>
         <div className="edit-button">

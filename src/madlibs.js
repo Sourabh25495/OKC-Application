@@ -29,8 +29,10 @@ export const INITIAL_STATE = {
 // ----------------------------------------------------------------------------
 
 export function reducer(state = INITIAL_STATE, action) {
+  console.log("Test123", action.payload)
   switch (action.type) {
     case SUBMIT_FIELD: {
+      console.log("In here")
       const {fieldName, answer}  = action.payload
       return { ...state, fieldAnswers: {...state.fieldAnswers, [fieldName] : answer} };
     }
@@ -51,7 +53,6 @@ export function reducer(state = INITIAL_STATE, action) {
 // ----------------------------------------------------------------------------
 
 export function submitField({ id, answer }) {
-  console.log("TEST", id, answer);
   return { type: SUBMIT_FIELD, payload: { fieldName: id, answer } };
 }
 
