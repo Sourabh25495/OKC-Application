@@ -85,7 +85,6 @@ const ComposeEssay = ({ setShowEditPage }) => {
             <Button
               variant="contained"
               className={classes.muiButton}
-              // disabled={answers ? Object.keys(answers).length === 0 : false}
               onClick={handleShowEditPage}
             >
               Edit
