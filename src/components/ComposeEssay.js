@@ -6,7 +6,16 @@ import { useStyles } from "./styles";
 import { processInputFieldParams } from "./utils";
 import { useSelector } from "react-redux";
 
-const SelfSpace = ({ setShowEditPage }) => {
+const answerConfigs = {
+  hometown: "Originally from ",
+  favoriteFood: "Can't get enough ",
+  loveToDo: "I ",
+  music: "I love listening to ",
+  messageIf: "Send me a message if you ",
+  bar: "My favourite watering hole is ",
+};
+
+const ComposeEssay = ({ setShowEditPage }) => {
   const fieldLabels = Object.values(COPY);
   const fieldNames = Object.values(FIELD_NAMES);
   const staticStatement = Object.values(STATIC_ESSAY_LINES);
@@ -18,27 +27,27 @@ const SelfSpace = ({ setShowEditPage }) => {
   const answers = useSelector((state) => state.fieldAnswers);
   const classes = useStyles();
 
-  const Essay = () => {
+  const mapAnswers = () => {
     return (
-      <p>
-        {answers && answers.hometown
-          ? `Originally from ${answers.hometown} `
-          : ""}
-        {answers && answers.favoriteFood
-          ? `Cant get enough ${answers.favoriteFood} `
-          : ""}
-        {answers && answers.loveToDo ? `I ${answers.loveToDo} ` : ""}
-        {answers && answers.music
-          ? `I love listening to ${answers.music} `
-          : ""}
-        {answers && answers.messageIf
-          ? `Send Me a message if you  ${answers.messageIf} `
-          : ""}
-        {answers && answers.bar
-          ? `My favourite watering hole is ${answers.messageIf} `
-          : ""}
-      </p>
+      answers &&
+      Object.keys(answers).map((answerKey) => {
+        const message = answerConfigs[answerKey];
+        const answer = answers[answerKey];
+
+        if (answer && message) {
+          return (
+            <>
+              {message}
+              <b>{answer + " "}</b>
+            </>
+          );
+        }
+      })
     );
+  };
+
+  const Essay = () => {
+    return <p>{mapAnswers()}</p>;
   };
 
   const handleShowEditPage = () => {
@@ -88,4 +97,4 @@ const SelfSpace = ({ setShowEditPage }) => {
   );
 };
 
-export default SelfSpace;
+export default ComposeEssay;
