@@ -4,5 +4,8 @@ export const useStyles = makeStyles((theme) => ({
   muiButton: {
     backgroundColor: "#00CC00",
   },
+  textField: {
+    backgroundColor: "#FFFFFF"
+  }
 }));
 
