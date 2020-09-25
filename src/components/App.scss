@@ -1,21 +1,40 @@
 .match-area {
-  padding: 20px;
+  //padding: 20px;
   display: block;
-  color: green($color: #000000)
+  color: green($color: #000000);
+  border-style: solid;
+  border-width: 60px;
+  border-color: #3D59AB;
+  height: 90vh;
 }
 
-.essay-page-container{
+.essay-page-container {
   display: inline;
 }
 
 .form-container {
-  display: inline-block; 
-  width: 45%; 
-  padding: 5px;
-
+  display: inline-block;
+  width: 45%;
+  background-color: #f8f8f8;
+  padding: 15px;
+  height: 87vh;
+  overflow-y: auto;
 }
 
 .essay-container {
-  display: inline-block; 
-  width: 45%
+  display: inline-block;
+  width: 45%;
+  padding: 15px;
+  height: 87vh;
+  overflow-y: auto;
+}
+
+.label {
+  padding: 15px;
+  font-size: 24px;
+  font-family: Arial;
+}
+
+.edit-button{
+  padding-left: 20px;
 }

@@ -2,12 +2,11 @@ import React from "react";
 import { TextField } from "@material-ui/core";
 
 export const InputComponent = ({ label }) => {
-  console.log("label", label);
   return (
-    <div style={{ display: "grid" }}>
-      <>
+    <div style={{ display: "grid", paddingTop: "30px" }}>
+      <div className="label">
         <label>{label}</label>
-      </>
+      </div>
       <>
         <TextField variant="outlined" />
       </>
