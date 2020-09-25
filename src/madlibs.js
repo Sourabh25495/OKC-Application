@@ -7,6 +7,7 @@ export const SUBMIT_FIELD = "MADLIBS.SUBMIT_FIELD";
 
 export const UPDATE_ESSAY = "MADLIBS.UPDATE_ESSAY";
 export const INCREMENT_COUNTER = "MADLIBS.INCREMENT_COUNTER";
+export const START_OVER = "MADLIBS.START_OVER";
 
 // Initial state
 // ----------------------------------------------------------------------------
@@ -48,6 +49,11 @@ export function reducer(state = INITIAL_STATE, action) {
       return {
         ...state,
         counter: state.counter + 1,
+      };
+    }
+    case START_OVER: {
+      return {
+        state,
       };
     }
 

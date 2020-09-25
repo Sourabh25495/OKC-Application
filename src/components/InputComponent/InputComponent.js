@@ -13,12 +13,15 @@ export const InputComponent = ({ label, id, staticText }) => {
       <>
         <TextField
           variant="outlined"
-          onBlur={
-            ((e) =>
-              dispatch({
-                type: SUBMIT_FIELD,
-                payload: { fieldName: id, answer: e.target.value, staticStatement: staticText},
-              }))
+          onBlur={(e) =>
+            e.target.value && dispatch({
+              type: SUBMIT_FIELD,
+              payload: {
+                fieldName: id,
+                answer: `${e.target.value} ${e.target.value ? '.' : ''}`,
+                staticStatement: staticText,
+              },
+            })
           }
         />
       </>

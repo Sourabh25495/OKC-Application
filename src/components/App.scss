@@ -28,6 +28,13 @@
   height: 87vh;
   overflow-y: auto;
 }
+.edit-container {
+  width: 100%;
+  padding: 15px;
+  overflow-y: auto;
+  display: inline-grid;
+  justify-content: center;
+}
 
 .label {
   padding: 15px;
@@ -40,12 +47,20 @@
   font-family: Arial;
 }
 
-.edit-button {
+.button {
   padding-left: 20px;
+  padding-top: 7px;
 }
 
 .essay-text-display {
   padding-left: 20px;
   font-family: arial;
   font-size: 18px;
+}
+
+.essay-edit-display {
+  padding-left: 20px;
+  font-family: arial;
+  font-size: 18px;
+  width: 400px;
 }

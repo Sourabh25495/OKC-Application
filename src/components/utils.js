@@ -9,3 +9,11 @@ export const processInputFieldParams = (
     staticStatement: staticStatement[i],
   }));
 };
+
+export const processObjectToPopulateText = ({ populateText }) => {
+  const userEnteredText = Object.entries(populateText)
+  
+  return userEnteredText.flat().join("")
+
+
+};
