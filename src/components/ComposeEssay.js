@@ -16,7 +16,6 @@ const SelfSpace = ({ setShowEditPage }) => {
     staticStatement
   );
   const answers = useSelector((state) => state.fieldAnswers);
-  console.log("answer", answers);
   const classes = useStyles();
 
   const Essay = () => {
