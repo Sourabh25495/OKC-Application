@@ -46,5 +46,3 @@ export const EditPage = ({ setShowEditPage }) => {
     </div>
   );
 };
-
-export default EditPage;
