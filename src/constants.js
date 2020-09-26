@@ -28,7 +28,7 @@ export const FIELDS = {
 export const STATIC_ESSAY_LINES = {
   [FIELD_NAMES.hometown]: "Originally from ",
   [FIELD_NAMES.favoriteFood]: "Cant get enough ",
-  [FIELD_NAMES.loveToDo]: "I ",
+  [FIELD_NAMES.loveToDo]: "I love to ",
   [FIELD_NAMES.messageIf]: "Send Me a message if you ",
   [FIELD_NAMES.music]: "I love listening to ",
   [FIELD_NAMES.bar]: "My favourite watering hole is ",

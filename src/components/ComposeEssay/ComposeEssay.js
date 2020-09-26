@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 const answerConfigs = {
   hometown: "Originally from ",
   favoriteFood: "Can't get enough ",
-  loveToDo: "I ",
+  loveToDo: "I love to ",
   music: "I love listening to ",
   messageIf: "Send me a message if you ",
   bar: "My favourite watering hole is ",
