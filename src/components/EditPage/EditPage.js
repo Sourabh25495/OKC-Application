@@ -1,8 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Button, TextField } from "@material-ui/core";
 import { useStyles } from "../styles";
-import { useDispatch } from "react-redux";
 import { processObjectToPopulateText } from "../utils";
 import { START_OVER } from "../../madlibs";
 
