@@ -12,7 +12,7 @@ export const InputComponent = ({ label, id, staticText }) => {
       <div className="field-label">
         <label>{label}</label>
       </div>
-      <div style={{paddingLeft: '15px', width: '95%', paddingRight: '15px'}}>
+      <div className="text-field-wrapper">
         <TextField
           variant="outlined"
           className={classes.textField}
